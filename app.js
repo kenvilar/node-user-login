@@ -19,6 +19,10 @@ app.use(session({
 	resave: true
 }));
 
+// handle passport
+app.use(passport.initialize());
+app.use(passport.session());
+
 const index = require('./routes/index');
 const users = require('./routes/users');
 
