@@ -7,9 +7,11 @@
   },
   "dependencies": {
     "body-parser": "~1.18.2",
+    "connect-flash": "^0.1.1",
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.9",
     "express": "~4.15.5",
+    "express-messages": "^1.0.1",
     "jade": "~1.11.0",
     "mongodb": "^3.0.3",
     "mongoose": "^5.0.7",
