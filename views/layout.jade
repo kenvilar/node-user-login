@@ -22,14 +22,14 @@ html(lang='en')
             span.icon-bar
             span.icon-bar
             span.icon-bar
-          a.navbar-brand(href='#') User Login System
+          a.navbar-brand(href='/') User Login System
         #navbar.collapse.navbar-collapse
           ul.nav.navbar-nav
-            li
+            li(class=(title === 'Members' ? 'active' : ''))
               a(href='/') Members
-            li
+            li(class=(title === 'Register' ? 'active' : ''))
               a(href='/users/register') Register
-            li
+            li(class=(title === 'Login' ? 'active' : ''))
               a(href='/users/login') Login
           ul.nav.navbar-nav.navbar-right
             li
