@@ -23,6 +23,25 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
+// Validator
+app.use(expressValidator({
+	errorFormatter: function (param, msg, val) {
+		var namespace = param.split('.'),
+			root = namespace.shift(),
+			formParam = root;
+
+		while (namespace.length) {
+			formParam += '[' + namespace.shift()
+		}
+
+		return {
+			param: formParam,
+			msg: msg,
+			value: val
+		}
+	}
+}));
+
 const index = require('./routes/index');
 const users = require('./routes/users');
 
