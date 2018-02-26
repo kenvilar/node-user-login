@@ -1,0 +1,24 @@
+{
+  "name": "node-user-login",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Ken Vilar"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "nodejs",
+    "login-system",
+    "node",
+    "javascript"
+  ],
+  "homepage": "https://github.com/kenvilar/node-user-login",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
