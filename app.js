@@ -12,10 +12,21 @@ const flash = require('connect-flash');
 const mongo = require('mongodb');
 const mongoose = require('mongoose');
 
+// handle sessions
+app.use(session({
+	secret: 'secret',
+	saveUninitialized: true,
+	resave: true
+}));
+
 const index = require('./routes/index');
 const users = require('./routes/users');
 
-var app = express();
+let app = express();
+let db = mongoose.connection;
+
+// handle file uploads
+app.use(multer({dest: './uploads'}));
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
