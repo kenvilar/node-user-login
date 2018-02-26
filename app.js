@@ -12,6 +12,10 @@ const flash = require('connect-flash');
 const mongo = require('mongodb');
 const mongoose = require('mongoose');
 
+// Initialized
+let app = express();
+let db = mongoose.connection;
+
 // handle sessions
 app.use(session({
 	secret: 'secret',
@@ -51,9 +55,6 @@ app.use(function (req, res, next) {
 
 const index = require('./routes/index');
 const users = require('./routes/users');
-
-let app = express();
-let db = mongoose.connection;
 
 // handle file uploads
 app.use(multer({dest: './uploads'}));
