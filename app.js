@@ -42,6 +42,13 @@ app.use(expressValidator({
 	}
 }));
 
+// handle flash messages
+app.use(require('connect-flash')());
+app.use(function (req, res, next) {
+	res.locals.messages = require('express-messages')(req, res);
+	next();
+});
+
 const index = require('./routes/index');
 const users = require('./routes/users');
 
