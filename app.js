@@ -31,7 +31,7 @@ app.use(expressValidator({
 			formParam = root;
 
 		while (namespace.length) {
-			formParam += '[' + namespace.shift()
+			formParam += '[' + namespace.shift() + ']';
 		}
 
 		return {
